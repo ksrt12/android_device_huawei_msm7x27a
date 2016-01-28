@@ -142,8 +142,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=52m \
-    dalvik.vm.heaptargetutilization=0.25
+    dalvik.vm.heapstartsize=5m \
+    dalvik.vm.heapgrowthlimit=64m \
+    dalvik.vm.heapsize=128m \
+    dalvik.vm.heaptargetutilization=0.25 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=2m
 
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
@@ -221,10 +225,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
    dalvik.vm.dex2oat-Xmx=96m \
    dalvik.vm.image-dex2oat-Xms=48m \
    dalvik.vm.image-dex2oat-Xmx=48m
-
-# OTAUpdater
-PRODUCT_PACKAGES += \
-   OTAUpdater
 
 # Allow ADB by default
 ADDITIONAL_DEFAULT_PROPERTIES += \
