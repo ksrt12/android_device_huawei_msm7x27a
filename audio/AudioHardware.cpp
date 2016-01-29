@@ -1223,6 +1223,7 @@ int check_and_set_audpp_parameters(char *buf, int size)
             enable_preproc_mask[samp_index] |= NS_ENABLE;
         }
     }
+    ALOGV("success audp params");
     return 0;
 
 token_err:
