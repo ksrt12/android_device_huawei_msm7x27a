@@ -174,7 +174,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.disableWifiApFirmwareReload=true
+    ro.disableWifiApFirmwareReload=false
 
 # Low RAM
 PRODUCT_PROPERTY_OVERRIDES += \
