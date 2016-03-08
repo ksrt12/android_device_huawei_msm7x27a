@@ -58,13 +58,6 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# FM Radio
-#PRODUCT_PACKAGES += \
-#    FM2 \
-#    FMRecord \
-#    libqcomfm_jni \
-#    qcom.fmradio
-
 PRODUCT_PACKAGES +=  libstlport
 
 #wifi
@@ -173,10 +166,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.gapless.playback.disable=true \
     audio.offload.disable=1
 
-# Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.disableWifiApFirmwareReload=true 
-
 # Low RAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true \
@@ -189,12 +178,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.strictmode.visual=0 \
     persist.sys.strictmode.disable=1
-
-# FM Radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.analogpath.supported=false \
-    ro.fm.transmitter=false \
-    ro.fm.mulinst.recording.support=false
 
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
