@@ -1,9 +1,9 @@
-From d65ed91e94edb67906ac2a733ee3ad9e75cc487a Mon Sep 17 00:00:00 2001
+From 32bad304a719ff104574d3015d52566365b923d1 Mon Sep 17 00:00:00 2001
 From: ksrt12 <kazakov12stepan2012@live.ru>
-Date: Thu, 17 Mar 2016 15:28:56 +0600
+Date: Fri, 18 Mar 2016 12:16:12 +0600
 Subject: [PATCH] Add authors info)
 
-Change-Id: I4737e74880a680af50f458138b92e7a8cc2b9027
+Change-Id: I5d255eb315fee9b57c0c9edbbc265f20c0c9a1d2
 ---
  res/values-ru/cm_strings.xml     | 1 +
  res/values/cm_strings.xml        | 3 +++
@@ -21,14 +21,14 @@ index 97edb1c..0552d2b 100644
 +  <string name="authors_firmware">Авторы прошивки</string>
  </resources>
 diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
-index 8b34535..bdeb7a3 100644
+index 8b34535..4f29ba3 100644
 --- a/res/values/cm_strings.xml
 +++ b/res/values/cm_strings.xml
-@@ -1144,6 +1144,10 @@
+@@ -1144,6 +1144,9 @@
      <!-- CM Legal -->
      <string name="cmlicense_title">CyanogenMod legal</string>
  
-+    <!-- Authors firmware information-->
++    <!-- Authors firmware information -->
 +    <string name="authors_firmware">Authors firmware</string>
 +
      <!-- Menu label for reset the battery stats -->
