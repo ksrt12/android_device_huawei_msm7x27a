@@ -1,20 +1,20 @@
-From 65e4081fc2bcbdc15c129aa29a30086aec682ab4 Mon Sep 17 00:00:00 2001
+From 4ff6a792e01e22decbb8e46b802815fbd4bd6b31 Mon Sep 17 00:00:00 2001
 From: ksrt12 <kazakov12stepan2012@live.ru>
-Date: Fri, 12 Feb 2016 16:17:39 +0600
+Date: Thu, 17 Mar 2016 15:34:00 +0600
 Subject: [PATCH] kernel ru
 
-Change-Id: Ifed66ddcb73d8dea3ccd49408cf131965f50bd00
+Change-Id: Iec4c1df997ad97c491d058aef0f0fff12f497d16
 ---
  core/tasks/kernel.mk        | 13 +++++++++++--
- envsetup.sh                 | 14 ++++++++++++--
+ envsetup.sh                 | 16 +++++++++++++---
  target/product/full_base.mk |  2 +-
- 3 files changed, 24 insertions(+), 5 deletions(-)
+ 3 files changed, 25 insertions(+), 6 deletions(-)
 
 diff --git a/core/tasks/kernel.mk b/core/tasks/kernel.mk
-index 4486044..2fe8542 100644
+index fab7722..acd28ed 100644
 --- a/core/tasks/kernel.mk
 +++ b/core/tasks/kernel.mk
-@@ -202,7 +202,16 @@ ifneq ($(USE_CCACHE),)
+@@ -230,7 +230,16 @@ ifneq ($(USE_CCACHE),)
      ccache := $(strip $(wildcard $(ccache)))
  endif
  
@@ -32,7 +32,7 @@ index 4486044..2fe8542 100644
  ccache =
  
  define mv-modules
-@@ -210,7 +219,7 @@ define mv-modules
+@@ -238,7 +247,7 @@ define mv-modules
      if [ "$$mdpath" != "" ];then\
          mpath=`dirname $$mdpath`;\
          ko=`find $$mpath/kernel -type f -name *.ko`;\
@@ -42,10 +42,22 @@ index 4486044..2fe8542 100644
      fi
  endef
 diff --git a/envsetup.sh b/envsetup.sh
-index c62a57f..805d3bd 100644
+index 446947f..713f30d 100644
 --- a/envsetup.sh
 +++ b/envsetup.sh
-@@ -2105,14 +2105,24 @@ function cmrebase() {
+@@ -1978,9 +1978,9 @@ EOF
+             esac
+             shift
+             git push $@ ssh://$user@$review:29418/$project \
+-                $local_branch:refs/for/$remote_branch || return 1
++                $local_branch:refs/\for/$remote_branch || return 1
+             ;;
+-        changes|for)
++        changes|\for)
+             if [ "$FUNCNAME" = "cmgerrit" ]; then
+                 echo >&2 "'$FUNCNAME $command' is deprecated."
+             fi
+@@ -2122,6 +2122,16 @@ function cmrebase() {
  }
  
  function mka() {
@@ -62,9 +74,8 @@ index c62a57f..805d3bd 100644
      local T=$(gettop)
      if [ "$T" ]; then
          case `uname -s` in
-             Darwin)
--                make -C $T -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
-+                make -C $T $iberr $shdi -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
+@@ -2129,7 +2139,7 @@ function mka() {
+                 make -C $T -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
                  ;;
              *)
 -                mk_timer schedtool -B -n 1 -e ionice -n 1 make -C $T -j$(cat /proc/cpuinfo | grep "^processor" | wc -l) "$@"
@@ -86,5 +97,5 @@ index bac3e03..76c9fc7 100644
  # Get some sounds
  $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 -- 
-2.7.1
+2.7.3
 

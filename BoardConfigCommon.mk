@@ -138,13 +138,14 @@ BOARD_SEPOLICY_DIRS += device/huawei/msm7x27a-common/sepolicy
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
+BOARD_VOLD_MAX_PARTITIONS := 19
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   WITH_DEXPREOPT := true
 endif
 WITH_DEXPREOPT_PIC := true
-DONT_DEXPREOPT_PREBUILTS := true
+#DONT_DEXPREOPT_PREBUILTS := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true

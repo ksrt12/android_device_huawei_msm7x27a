@@ -1,9 +1,9 @@
-From 9cd00acbc7017aace85d46b2e2f318518e171f98 Mon Sep 17 00:00:00 2001
+From d65ed91e94edb67906ac2a733ee3ad9e75cc487a Mon Sep 17 00:00:00 2001
 From: ksrt12 <kazakov12stepan2012@live.ru>
-Date: Sat, 5 Mar 2016 17:28:21 +0600
+Date: Thu, 17 Mar 2016 15:28:56 +0600
 Subject: [PATCH] Add authors info)
 
-Change-Id: I60bb15f8d79a13b1773b3fb09f473f01a41539fe
+Change-Id: I4737e74880a680af50f458138b92e7a8cc2b9027
 ---
  res/values-ru/cm_strings.xml     | 1 +
  res/values/cm_strings.xml        | 3 +++
@@ -21,17 +21,19 @@ index 97edb1c..0552d2b 100644
 +  <string name="authors_firmware">Авторы прошивки</string>
  </resources>
 diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
-index 8338653..dd374cb 100644
+index 8b34535..bdeb7a3 100644
 --- a/res/values/cm_strings.xml
 +++ b/res/values/cm_strings.xml
-@@ -1142,4 +1142,7 @@
- 
+@@ -1144,6 +1144,10 @@
      <!-- CM Legal -->
      <string name="cmlicense_title">CyanogenMod legal</string>
-+
+ 
 +    <!-- Authors firmware information-->
 +    <string name="authors_firmware">Authors firmware</string>
- </resources>
++
+     <!-- Menu label for reset the battery stats -->
+     <string name="menu_stats_reset">Reset stats</string>
+     <!-- Reset stats confirmation dialog's message -->
 diff --git a/res/xml/device_info_settings.xml b/res/xml/device_info_settings.xml
 index 63fd94a..89e377f 100644
 --- a/res/xml/device_info_settings.xml
@@ -50,5 +52,5 @@ index 63fd94a..89e377f 100644
 +
  </PreferenceScreen>
 -- 
-2.7.2
+2.7.3
 

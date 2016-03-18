@@ -4,3 +4,4 @@ then
 sh device/huawei/msm7x27a-common/patches/apply.sh
 touch device/huawei/ok
 fi
+export USE_CCACHE=1
