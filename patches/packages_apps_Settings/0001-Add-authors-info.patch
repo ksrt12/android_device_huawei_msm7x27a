@@ -1,25 +1,28 @@
-From 32bad304a719ff104574d3015d52566365b923d1 Mon Sep 17 00:00:00 2001
+From bc24d8bd0d20d1cdc887bea151f42927f816481a Mon Sep 17 00:00:00 2001
 From: ksrt12 <kazakov12stepan2012@live.ru>
-Date: Fri, 18 Mar 2016 12:16:12 +0600
+Date: Sat, 19 Mar 2016 21:06:53 +0600
 Subject: [PATCH] Add authors info)
 
-Change-Id: I5d255eb315fee9b57c0c9edbbc265f20c0c9a1d2
+Change-Id: I532a005900d7d864459032bc15043570e545b3ef
 ---
- res/values-ru/cm_strings.xml     | 1 +
+ res/values-ru/cm_strings.xml     | 2 ++
  res/values/cm_strings.xml        | 3 +++
  res/xml/device_info_settings.xml | 8 ++++++++
- 3 files changed, 12 insertions(+)
+ 3 files changed, 13 insertions(+)
 
 diff --git a/res/values-ru/cm_strings.xml b/res/values-ru/cm_strings.xml
-index 97edb1c..0552d2b 100644
+index a3b3349..1068103 100644
 --- a/res/values-ru/cm_strings.xml
 +++ b/res/values-ru/cm_strings.xml
-@@ -984,4 +984,5 @@
+@@ -983,6 +983,8 @@
+   <string name="live_lock_screen_settings_disabled_prompt">Для просмотра живых экранов блокировки включите поддержку этой функции.</string>
+   <string name="interruptions_ignore_while_media_title">Не приглушать звук</string>
    <string name="interruptions_ignore_while_media_summary">Не снижать громкость воспроизведения мультимедиа при получении уведомлений</string>
++  <!-- Authors firmware information -->
++  <string name="authors_firmware">Авторы прошивки</string>
    <!-- CM Legal -->
    <string name="cmlicense_title">Политика конфиденциальности CyanogenMod</string>
-+  <string name="authors_firmware">Авторы прошивки</string>
- </resources>
+   <!-- Menu label for reset the battery stats -->
 diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
 index 8b34535..4f29ba3 100644
 --- a/res/values/cm_strings.xml
@@ -52,5 +55,5 @@ index 63fd94a..89e377f 100644
 +
  </PreferenceScreen>
 -- 
-2.7.3
+2.7.4
 
